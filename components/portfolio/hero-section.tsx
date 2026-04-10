@@ -36,7 +36,7 @@ export function HeroSection() {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance"
           >
             Hola, soy{" "}
-            <span className="text-primary">Tu Nombre</span>
+            <span className="text-primary">Lautaro Agustin Salina</span>
           </motion.h1>
 
           <motion.h2
@@ -45,7 +45,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium"
           >
-            Ingeniero en Sistemas de Información
+            Estudiante de 5to ano de Ingenieria en Sistemas de Informacion (UCP)
           </motion.h2>
 
           <motion.p
@@ -54,9 +54,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Construyo experiencias digitales accesibles y de alto rendimiento.
-            Me especializo en crear interfaces elegantes con código limpio y
-            soluciones escalables.
+            Especialista en transformar requerimientos complejos en soluciones web.
+            Interesado en IA, apasionado por la cocina y enfocado en crear
+            experiencias digitales accesibles, dinamicas y escalables.
           </motion.p>
 
           <motion.div
@@ -89,9 +89,9 @@ export function HeroSection() {
             className="flex items-center justify-center gap-6"
           >
             {[
-              { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:email@example.com", label: "Email" },
+              { icon: Github, href: "https://github.com/LautaroSalina99", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/lautaro-salina", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:lautaroagsalina15@gmail.com", label: "Email" },
             ].map((social) => (
               <motion.a
                 key={social.label}

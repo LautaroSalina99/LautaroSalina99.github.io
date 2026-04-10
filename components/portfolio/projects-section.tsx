@@ -7,50 +7,42 @@ import { ExternalLink, Github, Folder } from "lucide-react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-const projects = [
+type Project = {
+  title: string
+  description: string
+  technologies: string[]
+  github: string
+  demo?: string
+  featured: boolean
+}
+
+const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
-    description: "Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos y panel de administración.",
-    technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    title: "GymControl",
+    description: "Sistema de gestion para gimnasio familiar enfocado en administracion de socios y control interno de operaciones.",
+    technologies: ["JavaScript", "Node.js", "Next.js", "MySQL"],
+    github: "https://github.com/LautaroSalina99/GymControl-app",
     featured: true,
   },
   {
-    title: "Task Management App",
-    description: "Aplicación de gestión de tareas con drag & drop, notificaciones en tiempo real y colaboración en equipo.",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    title: "Tetris OOP & TDD",
+    description: "Juego de Tetris en Java con enfoque en programacion orientada a objetos y desarrollo guiado por pruebas para mayor robustez.",
+    technologies: ["Java", "OOP", "TDD", "JUnit"],
+    github: "https://github.com/felix-toledo/JAVA-tetris-oop-tdd",
     featured: true,
   },
   {
-    title: "API REST Service",
-    description: "API RESTful escalable con autenticación JWT, rate limiting y documentación completa con Swagger.",
-    technologies: ["Node.js", "Express", "JWT", "Redis"],
-    github: "https://github.com",
+    title: "API Backend Testing",
+    description: "Suite de pruebas para validar fiabilidad, estabilidad y comportamiento esperado de endpoints backend en distintos escenarios.",
+    technologies: ["Postman", "Jest", "API Testing", "Node.js"],
+    github: "https://github.com/StivenAlexis/bienal-backend-Testing",
     featured: false,
   },
   {
-    title: "Analytics Dashboard",
-    description: "Dashboard interactivo para visualización de datos con gráficos dinámicos y reportes exportables.",
-    technologies: ["React", "D3.js", "Tailwind", "GraphQL"],
-    github: "https://github.com",
-    demo: "https://example.com",
-    featured: true,
-  },
-  {
-    title: "Testing Framework",
-    description: "Framework de testing personalizado para automatización de pruebas E2E con reportes detallados.",
-    technologies: ["Jest", "Cypress", "Playwright", "CI/CD"],
-    github: "https://github.com",
-    featured: false,
-  },
-  {
-    title: "DevOps Pipeline",
-    description: "Pipeline de CI/CD completo con despliegue automático, monitoreo y alertas en tiempo real.",
-    technologies: ["Docker", "GitHub Actions", "AWS", "Terraform"],
-    github: "https://github.com",
+    title: "TPI Fonoaudiologia",
+    description: "Frontend para sistema de gestion de consultorio de fonoaudiologia, priorizando flujo claro y experiencia de usuario.",
+    technologies: ["JavaScript", "React", "Frontend", "UX/UI"],
+    github: "https://github.com/TheNoobian/TPI-Fono-Frontend",
     featured: false,
   },
 ]
@@ -75,7 +67,7 @@ export function ProjectsSection() {
             Proyectos Destacados
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Una selección de proyectos en los que he trabajado, desde aplicaciones web hasta soluciones backend.
+            Proyectos reales donde aplique desarrollo web, testing y buenas practicas para resolver necesidades concretas.
           </p>
         </motion.div>
 
@@ -164,7 +156,7 @@ export function ProjectsSection() {
             size="lg"
             className="border-border hover:border-primary hover:text-primary transition-all duration-300 hover:scale-105"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/LautaroSalina99" target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4 mr-2" />
               Ver más en GitHub
             </a>

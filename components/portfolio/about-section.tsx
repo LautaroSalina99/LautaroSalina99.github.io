@@ -3,14 +3,14 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Play, GraduationCap, Briefcase, MapPin, Calendar } from "lucide-react"
+import { GraduationCap, Briefcase, MapPin, Sparkles } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 const personalData = [
-  { icon: MapPin, label: "Ubicación", value: "Ciudad, País" },
-  { icon: Calendar, label: "Experiencia", value: "+3 años" },
-  { icon: GraduationCap, label: "Formación", value: "Ing. en Sistemas de Información" },
-  { icon: Briefcase, label: "Estado", value: "Disponible para proyectos" },
+  { icon: MapPin, label: "Ubicación", value: "Corrientes, Argentina" },
+  { icon: GraduationCap, label: "Formación", value: "5to ano de Ing. en Sistemas (UCP)" },
+  { icon: Sparkles, label: "Intereses", value: "IA y automatizacion" },
+  { icon: Briefcase, label: "Enfoque", value: "Soluciones web escalables" },
 ]
 
 export function AboutSection() {
@@ -44,15 +44,16 @@ export function AboutSection() {
           >
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Soy un apasionado por crear soluciones digitales que combinan diseño 
-                elegante con ingeniería robusta. Mi trabajo se centra en la intersección 
-                del diseño y el desarrollo, creando experiencias que no solo se ven bien, 
-                sino que están meticulosamente construidas para el rendimiento y la usabilidad.
+                Soy Lautaro Agustin Salina, estudiante de 5to ano de Ingenieria en
+                Sistemas de Informacion (UCP). Disfruto transformar requerimientos
+                complejos en productos web claros, mantenibles y orientados a
+                resultados.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Me especializo en el desarrollo frontend con tecnologías modernas, 
-                implementando testing riguroso y mejores prácticas de accesibilidad 
-                para garantizar productos de alta calidad.
+                Me interesa especialmente la IA y el desarrollo de software con
+                enfoque en calidad. Tambien me apasiona la cocina, una disciplina
+                que aplico para trabajar con creatividad, detalle y consistencia
+                en cada proyecto.
               </p>
             </div>
 
@@ -83,7 +84,7 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Right Column - Video Placeholder */}
+          {/* Right Column - Embedded Introduction Video */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -91,23 +92,15 @@ export function AboutSection() {
           >
             <Card className="overflow-hidden bg-card/50 border-border/50 hover:border-primary/30 transition-all duration-300 group">
               <CardContent className="p-0">
-                <div className="relative aspect-video bg-secondary/50 flex items-center justify-center">
-                  {/* Video thumbnail placeholder */}
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 to-transparent" />
-                  
-                  {/* Play button */}
-                  <motion.button
-                    className="relative z-10 p-6 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    aria-label="Reproducir video de presentación"
-                  >
-                    <Play className="h-8 w-8 ml-1" />
-                  </motion.button>
-
-                  {/* Corner decorations */}
-                  <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-primary/30" />
-                  <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary/30" />
+                <div className="relative aspect-video bg-secondary/50">
+                  <iframe
+                    src="https://www.youtube.com/embed/STzxTlJPRmU"
+                    title="Video de presentacion de Lautaro Agustin Salina"
+                    className="absolute inset-0 h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
                 </div>
                 
                 <div className="p-6">

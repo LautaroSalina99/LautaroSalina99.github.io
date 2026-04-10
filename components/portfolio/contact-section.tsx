@@ -3,16 +3,17 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Download, Mail, Github, Linkedin, Send } from "lucide-react"
+import { Download, Mail, Github, Linkedin, Send, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:email@example.com", label: "Email" },
+  { icon: Github, href: "https://github.com/LautaroSalina99", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/lautaro-salina", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/lautarosalina_/", label: "Instagram" },
+  { icon: Mail, href: "mailto:lautaroagsalina15@gmail.com", label: "Email" },
 ]
 
 export function ContactSection() {
@@ -66,7 +67,11 @@ export function ContactSection() {
                       asChild
                       className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105"
                     >
-                      <a href="/cv.pdf" download>
+                      <a
+                        href="https://drive.google.com/file/d/1qXA39XE_a1kRB26fggcNyUhgehuHmU0-/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Download className="h-4 w-4 mr-2" />
                         Descargar CV
                       </a>
@@ -108,10 +113,10 @@ export function ContactSection() {
                 Email directo
               </h3>
               <a 
-                href="mailto:email@example.com" 
+                href="mailto:lautaroagsalina15@gmail.com" 
                 className="text-primary hover:underline underline-offset-4 transition-all duration-300"
               >
-                email@example.com
+                lautaroagsalina15@gmail.com
               </a>
             </div>
           </motion.div>

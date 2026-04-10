@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export', // Obligatorio para GitHub Pages
   images: {
-    unoptimized: true,
+    unoptimized: true, // GitHub no tiene servidor para optimizar imágenes de Next
   },
-}
+  // IMPORTANTE: Si tu repositorio se llama, por ejemplo, "portfolio", 
+  // debés ponerlo acá abajo entre las barras. 
+  // Si tu repo se llama exactamente "tuusuario.github.io", dejalo vacío: ''
+  basePath: '/Portofolio-Lautaro-Salina', 
+};
 
-export default nextConfig
+export default nextConfig;

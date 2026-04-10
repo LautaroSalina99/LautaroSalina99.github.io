@@ -3,27 +3,48 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
+import {
+  Braces,
+  Globe,
+  Database,
+  Wrench,
+  ShieldCheck,
+  FileJson,
+  Coffee,
+  Server,
+  Layers,
+  Cylinder,
+  GitBranch,
+  Container,
+  Workflow,
+  TestTube,
+  Radar,
+  Send,
+} from "lucide-react"
 
 const technologies = [
-  { name: "JavaScript", category: "Frontend" },
-  { name: "TypeScript", category: "Frontend" },
-  { name: "React", category: "Frontend" },
-  { name: "Next.js", category: "Frontend" },
-  { name: "Node.js", category: "Backend" },
-  { name: "Express", category: "Backend" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "MongoDB", category: "Database" },
-  { name: "Jest", category: "Testing" },
-  { name: "Cypress", category: "Testing" },
-  { name: "Git", category: "Tools" },
-  { name: "Docker", category: "Tools" },
-  { name: "Tailwind CSS", category: "Styling" },
-  { name: "Figma", category: "Design" },
-  { name: "REST APIs", category: "Backend" },
-  { name: "GraphQL", category: "Backend" },
+  { name: "JavaScript", category: "Lenguajes", icon: FileJson },
+  { name: "Java", category: "Lenguajes", icon: Coffee },
+  { name: "Node.js", category: "Web", icon: Server },
+  { name: "Next.js", category: "Web", icon: Layers },
+  { name: "PostgreSQL", category: "DB", icon: Database },
+  { name: "MySQL", category: "DB", icon: Cylinder },
+  { name: "MongoDB", category: "DB", icon: Database },
+  { name: "Git", category: "Herramientas", icon: GitBranch },
+  { name: "Docker", category: "Herramientas", icon: Container },
+  { name: "n8n", category: "Herramientas", icon: Workflow },
+  { name: "Jest", category: "QA/Testing", icon: TestTube },
+  { name: "Cypress", category: "QA/Testing", icon: Radar },
+  { name: "Postman", category: "QA/Testing", icon: Send },
 ]
 
-const categories = ["Frontend", "Backend", "Database", "Testing", "Tools", "Styling", "Design"]
+const categories = [
+  { name: "Lenguajes", icon: Braces },
+  { name: "Web", icon: Globe },
+  { name: "DB", icon: Database },
+  { name: "Herramientas", icon: Wrench },
+  { name: "QA/Testing", icon: ShieldCheck },
+]
 
 export function TechSection() {
   const ref = useRef(null)
@@ -58,13 +79,14 @@ export function TechSection() {
         >
           {categories.map((category, index) => (
             <motion.span
-              key={category}
+              key={category.name}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3, delay: 0.3 + index * 0.05 }}
-              className="px-4 py-2 rounded-full bg-secondary/50 text-muted-foreground text-sm font-medium border border-border/50"
+              className="px-4 py-2 rounded-full bg-secondary/50 text-muted-foreground text-sm font-medium border border-border/50 inline-flex items-center gap-2"
             >
-              {category}
+              <category.icon className="h-4 w-4" />
+              {category.name}
             </motion.span>
           ))}
         </motion.div>
@@ -85,9 +107,8 @@ export function TechSection() {
               className="group relative"
             >
               <div className="p-4 rounded-xl bg-card/50 border border-border/50 hover:border-primary/50 hover:bg-card transition-all duration-300 text-center">
-                {/* Icon placeholder - using first letter as fallback */}
                 <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-lg group-hover:bg-primary/20 transition-colors duration-300">
-                  {tech.name.charAt(0)}
+                  <tech.icon className="h-6 w-6" />
                 </div>
                 <p className="text-sm font-medium text-foreground">{tech.name}</p>
                 <p className="text-xs text-muted-foreground mt-1">{tech.category}</p>

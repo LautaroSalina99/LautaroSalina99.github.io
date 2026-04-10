@@ -17,7 +17,7 @@ export function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Portfolio. Todos los derechos reservados.
+            © {currentYear} Lautaro Agustin Salina. Todos los derechos reservados.
           </p>
           <p className="text-muted-foreground text-sm flex items-center gap-1">
             Hecho con{" "}

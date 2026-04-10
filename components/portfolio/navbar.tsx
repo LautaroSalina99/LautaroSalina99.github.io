@@ -45,7 +45,7 @@ export function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <span className="text-primary">&lt;</span>
-            Portfolio
+            Lautaro Salina
             <span className="text-primary">/&gt;</span>
           </motion.a>
 

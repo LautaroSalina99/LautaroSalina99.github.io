@@ -14,8 +14,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Ingeniero en Sistemas de Información',
-  description: 'Portfolio profesional de desarrollo de software. Especializado en JavaScript, Node.js, Testing y más.',
+  title: 'Lautaro Agustin Salina | Portfolio',
+  description: 'Portfolio profesional de Lautaro Agustin Salina. Estudiante de Ingenieria en Sistemas, enfocado en desarrollo web, testing y soluciones escalables.',
   generator: 'v0.app',
   icons: {
     icon: [
