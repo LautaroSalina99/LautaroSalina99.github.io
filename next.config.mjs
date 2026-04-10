@@ -7,7 +7,7 @@ const nextConfig = {
   // IMPORTANTE: Si tu repositorio se llama, por ejemplo, "portfolio", 
   // debés ponerlo acá abajo entre las barras. 
   // Si tu repo se llama exactamente "tuusuario.github.io", dejalo vacío: ''
-  basePath: '/Portofolio-Lautaro-Salina', 
+  basePath: '/LautaroSalina99.github.io', 
 };
 
 export default nextConfig;
